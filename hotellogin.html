@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Login</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body background="https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/hotels/dubai/jumeirah-burj-al-arab/new-website-content/baa-hotel-home-page/hotel-gallery/baa_burj-al-arab_gallery_image-4/baa_burj-al-arab_gallery_image-4__portrait.jpg"></body>
+<body>
+    <header>
+        <h1>Welcome to the Saveetha Hotel</h1>
+        <p>Manage all your hotel bookings, rooms, and staff efficiently.</p>
+    </header>
+    <div class="login-container">
+        <h2>Hotel Booking System</h2>
+        <form id="loginForm" action="connect.php" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+            // Add any validation logic here if needed
+            window.location.href = 'main.html'; // Redirect to the main page
+        });
+    </script>
+</body>
+</html>

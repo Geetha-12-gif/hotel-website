@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Hotel Booking</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body background="https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/hotels/dubai/jumeirah-burj-al-arab/new-website-content/baa-hotel-home-page/hotel-gallery/baa_burj-al-arab_gallery_image-4/baa_burj-al-arab_gallery_image-4__portrait.jpg">
+    <center>
+    <header>
+        <h1>Welcome to Saveetha Hotel</h1>
+    </header>
+    <main>
+        <section class="booking-form">
+            <h2>Book Your Stay</h2>
+            <form id="bookingForm">
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>
+
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" max="10" required>
+
+                <label for="room">Room Type:</label>
+                <select id="room" name="room" required>
+                    <option value="Deluxe suite">Deluxe suite</option>
+                    <option value="Family suite">Family suite</option>
+                    <option value="Luxury penthouse">Luxury penthouse</option>
+                </select>
+                
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Our Hotel. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+            // Add any validation logic here if needed
+            alert('Room Booked successfully!'); // Replace with actual booking logic
+            window.location.href = 'main.html'; // Redirect to the main page after booking
+        });
+    </script>
+    </center>
+</body>
+</html>

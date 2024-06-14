@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Signup</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body background="https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/hotels/dubai/jumeirah-burj-al-arab/new-website-content/baa-hotel-home-page/hotel-gallery/baa_burj-al-arab_gallery_image-4/baa_burj-al-arab_gallery_image-4__portrait.jpg"></body>
+<body>
+    <header>
+        <h1>Welcome to the Saveetha Hotel</h1>
+        <p>Sign up to manage all your hotel bookings, rooms, and staff efficiently.</p>
+    </header>
+    <div class="signup-container">
+        <h2>Create an Account</h2>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="hotellogin.html">Login</a></p>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+            // Add any validation logic here if needed, like checking password match
+            alert('Account created successfully!'); // Replace with actual signup logic
+            window.location.href = 'hotellogin.html'; // Redirect to the login page after signup
+        });
+    </script>
+</body>
+</html>

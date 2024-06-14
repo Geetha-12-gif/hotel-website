@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Management</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body background="https://cdn.jumeirah.com/-/mediadh/dh/hospitality/jumeirah/hotels/dubai/jumeirah-burj-al-arab/new-website-content/baa-hotel-home-page/hotel-gallery/baa_burj-al-arab_gallery_image-4/baa_burj-al-arab_gallery_image-4__portrait.jpg"></body>
+<body>
+    <header>
+        <h1>Staff Management</h1>
+        <p>Handle staff details, schedules, and more.</p>
+    </header>
+    <main>
+        <section class="add-staff">
+            <h2>Add New Staff Member</h2>
+            <form action="add_staff.html" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="position">Position:</label>
+                <input type="text" id="position" name="position" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <button type="submit">Add Staff Member</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        function showPopup(message) {
+  alert(message); // Replace with your desired pop-up method (e.g., custom alert box)
+}
+
+const form = document.querySelector("form"); // Select the form element
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // Prevent default form submission
+  showPopup("Customer added successfully!"); // Display pop-up message
+});
+    </script>
+    <footer>
+        <p>&copy; 2024 Hotel Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
